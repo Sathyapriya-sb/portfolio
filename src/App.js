@@ -23,7 +23,7 @@ export default function DataPortfolio() {
   ];
 
   const keyMetrics = [
-    { label: "Projects Completed", value: "12+", sublabel: "End-to-End Analytics", color: "#3b82f6" },
+    { label: "Coffees", value: "∞", sublabel: "End-to-End Analytics", color: "#3b82f6" },
     { label: "Academic CGPA", value: "9.26", sublabel: "First Class Distinction", color: "#10b981" },
     { label: "Research Papers", value: "2", sublabel: "Conference Presented", color: "#8b5cf6" }
   ];
@@ -130,7 +130,7 @@ export default function DataPortfolio() {
             </div>
           </div>
           <div className="flex items-center gap-4">
-            <a href="mailto:sathyapriya.analyst@email.com" className="hidden md:flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all">
+            <a href="mailto:subbiah.sathyapriya@gmail.com" className="hidden md:flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all">
               <Mail size={16} />
               Contact Me
             </a>
@@ -147,10 +147,10 @@ export default function DataPortfolio() {
           <div className="max-w-7xl mx-auto">
             <div className="grid lg:grid-cols-2 gap-12 items-center">
               <div>
-                <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 rounded-full text-sm font-semibold mb-6">
+                {/* <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 rounded-full text-sm font-semibold mb-6">
                   <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
                   Available for Immediate Hire • Singapore PR
-                </div>
+                </div> */}
                 <h1 className="text-5xl lg:text-6xl font-bold mb-6 leading-tight">
                   Transforming Complex Data Into
                   <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600"> Strategic Insights</span>
@@ -172,15 +172,15 @@ export default function DataPortfolio() {
                     <span className="font-semibold">CGPA 9.26/10</span>
                   </div>
                 </div>
-                <div className="flex gap-4">
-                  <button className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all flex items-center gap-2 shadow-lg hover:shadow-xl">
-                    <Download size={18} />
-                    Download Resume
-                  </button>
-                  <a href="https://linkedin.com" className="px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 dark:hover:bg-slate-800 transition-all flex items-center gap-2">
-                    <Linkedin size={18} />
-                    LinkedIn
-                  </a>
+                  <div className="flex gap-4">
+                    <a href="/portfolio/Sathyapriya_resume.pdf" target="_blank" rel="noopener noreferrer" className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-all flex items-center gap-2 shadow-lg hover:shadow-xl">
+                      <ExternalLink size={18} />
+                      View Resume
+                    </a>
+                    <a href="https://www.linkedin.com/in/sathyapriya-subbiah" target="_blank" rel="noopener noreferrer" className="px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg hover:bg-blue-50 dark:hover:bg-slate-800 transition-all flex items-center gap-2">
+                      <Linkedin size={18} />
+                      LinkedIn
+                    </a>
                 </div>
               </div>
               
@@ -701,29 +701,40 @@ export default function DataPortfolio() {
               
               <div className="grid md:grid-cols-2 gap-6">
                 {/* Seminar 1 */}
-                <div className={`${cardBg} rounded-xl border ${borderColor} shadow-md hover:shadow-lg transition-all p-6`}>
-                  <div className="flex items-start gap-3 mb-4">
-                    <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
-                      <TrendingUp size={20} className="text-blue-600" />
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="font-bold mb-1">Blue Brain Project</h4>
-                      <p className="text-sm text-blue-600">Computational Neuroscience & Brain Simulation</p>
-                    </div>
-                  </div>
-                  <div className="flex items-center gap-2 mb-3 text-xs">
-                    <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 rounded">Academic Seminar II</span>
-                    <span className={secondaryText}>Semester 6</span>
-                  </div>
-                  <p className={`text-sm ${secondaryText} mb-3`}>
-                    Explored brain simulation technologies, neural networks, and nanobots for data acquisition in creating biologically detailed digital reconstructions.
-                  </p>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 rounded">Neuroscience</span>
-                    <span className="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 rounded">Neural Networks</span>
-                    <span className="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 rounded">Brain Simulation</span>
-                  </div>
-                </div>
+<a
+  href="/portfolio/BlueBrain_Seminar.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="block"
+>
+  <div className={`${cardBg} rounded-xl border ${borderColor} shadow-md hover:shadow-lg transition-all p-6`}>
+    <div className="flex items-start gap-3 mb-4">
+      <div className="w-10 h-10 bg-blue-100 dark:bg-blue-900/30 rounded-lg flex items-center justify-center flex-shrink-0">
+        <TrendingUp size={20} className="text-blue-600" />
+      </div>
+      <div className="flex-1">
+        <h4 className="font-bold mb-1">Blue Brain Project</h4>
+        <p className="text-sm text-blue-600">Computational Neuroscience & Brain Simulation</p>
+      </div>
+    </div>
+
+    <div className="flex items-center gap-2 mb-3 text-xs">
+      <span className="px-2 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 rounded">Academic Seminar II</span>
+      <span className={secondaryText}>Semester 6</span>
+    </div>
+
+    <p className={`text-sm ${secondaryText} mb-3`}>
+      Explored brain simulation technologies, neural networks, and nanobots for data acquisition in creating biologically detailed digital reconstructions.
+    </p>
+
+    <div className="flex flex-wrap gap-2">
+      <span className="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 rounded">Neuroscience</span>
+      <span className="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 rounded">Neural Networks</span>
+      <span className="text-xs px-2 py-1 bg-slate-100 dark:bg-slate-700 rounded">Brain Simulation</span>
+    </div>
+  </div>
+</a>
+
 
                 {/* Seminar 2 */}
                 <div className={`${cardBg} rounded-xl border ${borderColor} shadow-md hover:shadow-lg transition-all p-6`}>
@@ -755,7 +766,7 @@ export default function DataPortfolio() {
         </section>
 
         {/* Skills Visualization */}
-        <section className="px-6 py-16">
+        {/* <section className="px-6 py-16">
           <div className="max-w-5xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold mb-4">Technical Proficiency</h2>
@@ -810,7 +821,7 @@ export default function DataPortfolio() {
               </div>
             </div>
           </div>
-        </section>
+        </section> */}
 
         {/* Call to Action */}
         <section className="px-6 py-20">
@@ -818,25 +829,25 @@ export default function DataPortfolio() {
             <div className="bg-gradient-to-br from-blue-600 to-purple-600 rounded-3xl p-12 text-white shadow-2xl">
               <h2 className="text-4xl font-bold mb-4">Let's Work Together</h2>
               <p className="text-xl mb-8 opacity-90">
-                Ready to bring data-driven insights to your organization. Available for immediate start in Singapore.
+                Ready to bring data-driven insights to your organization.
               </p>
               
               <div className="flex flex-wrap justify-center gap-4 mb-8">
-                <a href="mailto:sathyapriya.analyst@email.com" className="px-8 py-4 bg-white text-blue-600 rounded-xl hover:bg-blue-50 transition-all font-semibold flex items-center gap-2 shadow-lg hover:shadow-xl">
+                <a href="mailto:subbiah.sathyapriya@gmail.com" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-white text-blue-600 rounded-xl hover:bg-blue-50 transition-all font-semibold flex items-center gap-2 shadow-lg hover:shadow-xl">
                   <Mail size={20} />
                   Email Me
                 </a>
-                <a href="#" className="px-8 py-4 bg-white/20 backdrop-blur-sm text-white rounded-xl hover:bg-white/30 transition-all font-semibold flex items-center gap-2">
+                <a href="https://www.linkedin.com/in/sathyapriya-subbiah" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-white/20 backdrop-blur-sm text-white rounded-xl hover:bg-white/30 transition-all font-semibold flex items-center gap-2">
                   <Linkedin size={20} />
                   LinkedIn
                 </a>
-                <a href="#" className="px-8 py-4 bg-white/20 backdrop-blur-sm text-white rounded-xl hover:bg-white/30 transition-all font-semibold flex items-center gap-2">
+                <a href="https://github.com/Sathyapriya-sb" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-white/20 backdrop-blur-sm text-white rounded-xl hover:bg-white/30 transition-all font-semibold flex items-center gap-2">
                   <Github size={20} />
                   GitHub
                 </a>
               </div>
               
-              <div className="flex flex-wrap justify-center gap-6 text-sm">
+              {/* <div className="flex flex-wrap justify-center gap-6 text-sm">
                 <div className="flex items-center gap-2">
                   <Check size={16} />
                   <span>Singapore PR</span>
@@ -849,7 +860,7 @@ export default function DataPortfolio() {
                   <Check size={16} />
                   <span>Full-time Ready</span>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
