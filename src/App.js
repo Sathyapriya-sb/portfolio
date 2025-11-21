@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { LineChart, Line, BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
-import { Target, Zap, Award, TrendingUp, Database, Code2, Mail, Linkedin, Github, ExternalLink, Download, Moon, Sun, MapPin, Briefcase, Calendar, ChevronRight, Check } from 'lucide-react';
+import { Target, Zap, Award, TrendingUp, Database, Code2, Mail, Linkedin, Github, ExternalLink, Download, Moon, Sun, MapPin, Briefcase, Calendar, ChevronRight, Check, Sparkles, Coffee, CircleHelp} from 'lucide-react';
 
 export default function DataPortfolio() {
   const [darkMode, setDarkMode] = useState(false);
@@ -23,9 +23,9 @@ export default function DataPortfolio() {
   ];
 
   const keyMetrics = [
-    { label: "Coffees", value: "∞", sublabel: "End-to-End Analytics", color: "#3b82f6" },
     { label: "Academic CGPA", value: "9.26", sublabel: "First Class Distinction", color: "#10b981" },
-    { label: "Research Papers", value: "2", sublabel: "Conference Presented", color: "#8b5cf6" }
+    { label: "Research Papers", value: "2", sublabel: "Conference Presented", color: "#8b5cf6" },
+    { label: "Vibe Rating", value: "Excellent", sublabel: "Living My Best Life", color: "#3b82f6" }
   ];
 
   const coreStrengths = [
@@ -202,22 +202,8 @@ export default function DataPortfolio() {
                     ))}
                   </div>
                   
-                  {activeMetric === 0 && (
-                    <div>
-                      <div className="text-sm font-semibold mb-2 text-blue-600">Portfolio Project Completion</div>
-                      <ResponsiveContainer width="100%" height={180}>
-                        <BarChart data={projectsData}>
-                          <CartesianGrid strokeDasharray="3 3" opacity={0.1} />
-                          <XAxis dataKey="name" tick={{ fontSize: 11 }} angle={-15} textAnchor="end" height={60} />
-                          <YAxis tick={{ fontSize: 12 }} domain={[0, 100]} />
-                          <Tooltip contentStyle={{ backgroundColor: darkMode ? '#1e293b' : '#fff', border: 'none', borderRadius: '8px' }} />
-                          <Bar dataKey="completion" fill="#3b82f6" radius={[8, 8, 0, 0]} />
-                        </BarChart>
-                      </ResponsiveContainer>
-                    </div>
-                  )}
                   
-                  {activeMetric === 1 && (
+                  {activeMetric === 0 && (
                     <div>
                       <div className="text-sm font-semibold mb-2 text-green-600">Academic Excellence Journey</div>
                       <div className="space-y-4">
@@ -238,14 +224,15 @@ export default function DataPortfolio() {
                             <div className="text-xs text-slate-600 dark:text-slate-400">With Distinction</div>
                           </div>
                         </div>
-                        <div className="text-xs text-slate-500 mt-2">
-                          Outstanding in: AI, DBMS, Compiler Design, Data Structures
+
+                        <div className="text-xs text-center text-slate-500 italic mt-3">
+                            From algorithms to analytics, constantly learning and leveling up every day 🌱
                         </div>
                       </div>
                     </div>
                   )}
                   
-                  {activeMetric === 2 && (
+                  {activeMetric === 1 && (
                     <div>
                       <div className="text-sm font-semibold mb-4 text-purple-600">Research & Publications</div>
                       <div className="space-y-4">
@@ -281,14 +268,88 @@ export default function DataPortfolio() {
                           </div>
                         </div>
                         
-                        <div className="text-center pt-2">
-                          <div className="text-xs text-slate-500">
-                            Additional seminars: Blue Brain Project, Generative AI in Visual Arts
-                          </div>
+                        <div className="text-xs text-center text-slate-500 italic mt-3">
+                            Additionally, presented classroom seminars on Blue Brain Project & Generative AI in Visual Arts🎤
                         </div>
                       </div>
                     </div>
                   )}
+
+                  {activeMetric === 2 && (
+                    <div>
+                      <div className="text-sm font-semibold mb-3 text-blue-600 flex items-center gap-2">
+                        <Sparkles size={16} className="text-blue-600" />
+                        Current Life Status
+                      </div>
+                      
+                      {/* Bento Box Grid */}
+                      <div className="grid grid-cols-4 gap-2" style={{ gridAutoRows: '60px' }}>
+                        {/* Big Status Card - Takes 3 columns, 2 rows */}
+                        <div className={`col-span-3 row-span-2 ${darkMode ? 'bg-blue-900/40' : 'bg-blue-100'} rounded-xl p-4 flex flex-col justify-center items-center border-2 border-blue-600`}>
+                          <div className="text-3xl font-bold text-blue-600">
+                            VIBING
+                          </div>
+                          <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">
+                            (mostly living)
+                          </div>
+                        </div>
+                        
+                        {/* Alive Status - 1 column, 1 row */}
+                        <div className={`col-span-1 row-span-1 ${darkMode ? 'bg-blue-900/30' : 'bg-blue-50'} rounded-xl p-2 flex flex-col justify-center items-center`}>
+                          <Check size={20} className="text-blue-600 mb-1" />
+                          <div className="text-xs font-semibold text-blue-600">Alive</div>
+                        </div>
+                        
+                        {/* Caffeinated Status - 1 column, 1 row */}
+                        <div className={`col-span-1 row-span-1 ${darkMode ? 'bg-blue-900/30' : 'bg-blue-50'} rounded-xl p-2 flex flex-col justify-center items-center`}>
+                          <Coffee size={20} className="text-blue-600 mb-1" />
+                          <div className="text-xs font-semibold text-blue-600">Caffeinated</div>
+                        </div>
+                        
+                        {/* Chaos Meter - 2 columns, 1 row */}
+                        <div className={`col-span-2 row-span-1 ${darkMode ? 'bg-blue-900/30' : 'bg-blue-50'} rounded-xl p-3 flex flex-col justify-center`}>
+                          <div className="text-xs font-semibold text-blue-600 mb-1">Chaos Level</div>
+                          <div className={`w-full ${darkMode ? 'bg-slate-700' : 'bg-slate-200'} rounded-full h-2`}>
+                            <div className="bg-blue-600 h-2 rounded-full" style={{ width: '70%' }}></div>
+                          </div>
+                        </div>
+                        
+                        {/* Stress Level - 2 columns, 1 row */}
+                        <div className={`col-span-2 row-span-1 ${darkMode ? 'bg-blue-900/30' : 'bg-blue-50'} rounded-xl p-3 flex flex-col justify-center`}>
+                          <div className="text-xs font-semibold text-blue-600 mb-1">Stress Meter</div>
+                          <div className={`w-full ${darkMode ? 'bg-slate-700' : 'bg-slate-200'} rounded-full h-2`}>
+                            <div className="bg-blue-600 h-2 rounded-full" style={{ width: '47%' }}></div>
+                          </div>
+                        </div>
+                        
+                        {/* Adulting Status - 2 columns, 1 row */}
+                        <div
+                          className={`col-span-2 row-span-1 ${darkMode ? 'bg-blue-900/30' : 'bg-blue-50'} rounded-xl p-3 flex items-center justify-between`}>
+                          <div>
+                            <div className="text-xs font-semibold text-blue-600">Adulting</div>
+                            <div className="text-xs text-slate-600 dark:text-slate-400">
+                              In Progress...
+                            </div>
+                          </div>
+                          <CircleHelp size={20} className="text-blue-600" />
+                        </div>
+                        
+                        {/* Main Quest - 2 columns, 1 row */}
+                        <div className={`col-span-2 row-span-1 ${darkMode ? 'bg-blue-900/30' : 'bg-blue-50'} rounded-xl p-3 flex items-center justify-center`}>
+                          <div className="text-center">
+                            <div className="text-lg font-bold text-blue-600">77%</div>
+                            <div className="text-xs text-slate-500">Winging It Successfully So Far</div>
+                          </div>
+                        </div>
+                      </div>
+                      
+                      <div className="text-xs text-center text-slate-500 italic mt-3">
+                        No idea what I'm doing but vibes are immaculate ✨
+                      </div>
+                    </div>
+                  )}
+
+                  
                 </div>
               </div>
             </div>
