@@ -25,30 +25,34 @@ export default function DataPortfolio() {
   const keyMetrics = [
     { label: "Academic CGPA", value: "9.26", sublabel: "First Class Distinction", color: "#10b981" },
     { label: "Research Papers", value: "2", sublabel: "Conference Presented", color: "#8b5cf6" },
-    { label: "Vibe Rating", value: "Excellent", sublabel: "Living My Best Life", color: "#3b82f6" }
+    { label: "Vibe Rating", value: "Excellent", sublabel: "YOLO", color: "#3b82f6" }
   ];
 
   const coreStrengths = [
     {
-      icon: Target,
-      title: "Business Impact Focus",
-      desc: "Consistently deliver measurable results: 75% efficiency gains, 99.99% accuracy standards"
-    },
-    {
       icon: Database,
-      title: "Technical Versatility",
-      desc: "Full-stack analytics: SQL, Python, Tableau, Machine Learning, Geospatial Intelligence"
+      title: "Full-Stack Analytics",
+      desc: "From data extraction (SQL, Python) to visualization (Power BI, Tableau dashboards) to documentation (SOPs) - I handle the complete data pipeline.",
+      highlight: "End-to-end ownership"
     },
     {
-      icon: Zap,
-      title: "End-to-End Execution",
-      desc: "From data collection to dashboard delivery - proven ability to own complete analytics workflows"
+      icon: Target,
+      title: "Quality & Accuracy",
+      desc: "Performed thorough validation on thousands of daily samples using Python and geospatial analysis, ensuring reliable data for decision-making.",
+      highlight: "Zero critical errors in production"
     },
     {
       icon: Award,
-      title: "Academic Excellence",
-      desc: "9.26/10 CGPA, NTU Advanced Analytics certified, published researcher with strong fundamentals"
-    }
+      title: "Built to Learn & Adapt",
+      desc: "Fresh perspective with solid fundamentals: 9.26 CGPA, NTU certified, 2 published research papers, and immediate real-world impact.",
+      highlight: "Ready to contribute from day one"
+    },
+    {
+      icon: Zap,
+      title: "Automation & Efficiency",
+      desc: "I build Python workflows and Excel automations that save hours of manual work weekly. Your team focuses on strategy, not repetitive tasks.",
+      highlight: "60% time reduction achieved"
+    },
   ];
 
   const experience = {
@@ -287,7 +291,7 @@ export default function DataPortfolio() {
                         {/* Big Status Card - Takes 3 columns, 2 rows */}
                         <div className={`col-span-3 row-span-2 ${darkMode ? 'bg-blue-900/40' : 'bg-blue-100'} rounded-xl p-4 flex flex-col justify-center items-center border-2 border-blue-600`}>
                           <div className="text-3xl font-bold text-blue-600">
-                            VIBING
+                            VIBING~
                           </div>
                           <div className="text-xs text-slate-600 dark:text-slate-400 mt-1">
                             (mostly living)
@@ -344,7 +348,7 @@ export default function DataPortfolio() {
                       </div>
                       
                       <div className="text-xs text-center text-slate-500 italic mt-3">
-                        No idea what I'm doing but vibes are immaculate ✨
+                        No idea what I'm doing but the vibes are immaculate ✨
                       </div>
                     </div>
                   )}
@@ -361,7 +365,7 @@ export default function DataPortfolio() {
           <div className="max-w-7xl mx-auto">
             <div className="text-center mb-12">
               <h2 className="text-4xl font-bold mb-4">Why Hire Me?</h2>
-              <p className={secondaryText}>Four reasons I deliver results from day one</p>
+              <p className={secondaryText}>Four reasons I won't waste your time</p>
             </div>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
               {coreStrengths.map((strength, idx) => {
@@ -372,6 +376,9 @@ export default function DataPortfolio() {
                       <Icon size={24} className="text-white" />
                     </div>
                     <h3 className="text-xl font-bold mb-2">{strength.title}</h3>
+                    <div className="inline-block px-1 py-1 bg-blue-100 dark:bg-blue-900/30 text-blue-700 dark:text-blue-400 rounded-lg text-xs font-semibold mb-3">
+                      {strength.highlight}
+                    </div>
                     <p className={`text-sm ${secondaryText}`}>{strength.desc}</p>
                   </div>
                 );
